@@ -9,7 +9,7 @@ import requests from '../utils/requests'
 export default function Home({results}) {
   console.log('show res', results);
   return (
-    <div className='bg-blue-450 pt-5    text-gray-300'>
+    <div className='bg-blue-450 py-5  text-gray-300'>
    
       <Head>
         <title>Hulu 2.0</title>
