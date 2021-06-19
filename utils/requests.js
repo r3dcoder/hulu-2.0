@@ -7,43 +7,46 @@ export default {
     },
     fetchTopRated : {
         title: 'Top Rated',
-        url: `/trending/all/day?api_key=9ddacb70aca6a2092c9cc6b570a74a3c`
+        url: `/movie/top_rated?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&language=en-US&page=1`
     },
     fetchActionMovies : {
         title: 'Action',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&with_genres=28`
+        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&language=en-US&include_adult=false&include_video=false&page=1&with_genres=28`
     },
     fetchComedyMovies : {
         title: 'Comedy',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=35`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=comedy&page=1`
     },
     fetchHorrorMovies : {
         title: 'Horror',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=27`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Horror&page=1`
     },
     fetchRomanceMovies : {
         title: 'Romance',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=10749`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Romance&page=1`
     },
     fetchMystery : {
         title: 'Mystery',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=9648`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Mystery&page=1`
     },
     fetchSciFi : {
         title: 'Sci-Fi',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=878`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Sci-Fi&page=1`
     },
     fetchWestern : {
         title: 'Western',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=37`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Western&page=1`
     },
     fetchAnimation : {
         title: 'Animation',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=16`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Animation&page=1`
     },
     fetchTv : {
         title: 'Tv',
-        url: `/discover/movie?api_key=9ddacb70aca6a2092c9cc6b570a74a3c$&with_genres=10770`
+        url: `/search/company?api_key=9ddacb70aca6a2092c9cc6b570a74a3c&query=Tv&page=1`
     },
      
 }
+
+
+ 

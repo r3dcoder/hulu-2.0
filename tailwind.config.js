@@ -18,6 +18,9 @@ module.exports = {
         blue: {
           450: '#06202A'
         },
+      },
+      screen:{
+        "3xl": "2000px"
       }
     },
   },
