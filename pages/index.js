@@ -3,8 +3,11 @@ import Header from '../component/CustomHeader'
 import 'tailwindcss/tailwind.css'
 import Nav from '../component/Nav'
 import Results from '../component/Results'
- 
-export default function Home() {
+import { urlObjectKeys } from 'next/dist/next-server/lib/utils'
+import requests from '../utils/requests'
+ import server from '../config'
+export default function Home({results}) {
+  console.log('show res', results);
   return (
     <div>
    
@@ -15,13 +18,29 @@ export default function Home() {
       </Head>
        <Header/>
        <Nav/>
-       <Results/>
+       <Results results={results}/>
       
     </div>
   )
 }
 
 export async function getServerSideProps(context){
-  const genre = context.query.genre;
   
+  const genre = context.query.genre;
+  const request = await fetch(`https://api.themoviedb.org/3${requests.fetchTrending.url
+  }`).then((res)=>res.json());
+ 
+  return {
+    props:{
+      results: request.results,
+    }
+  }
 }
+
+const getData = async (genre) => {
+  const apiResponse = await fetch(`http://localhost:3000/api/${genre}`).then((res) =>
+    res.json()
+  );
+  // console.log("api res", apiResponse);
+  return apiResponse;
+};
